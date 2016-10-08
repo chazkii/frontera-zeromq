@@ -8,4 +8,4 @@ RUN apk add --no-cache --virtual=build_dependencies musl-dev gcc python3-dev zer
     apk del build_dependencies && \
     apk add --no-cache zeromq
 
-CMD ["python", "-m", "frontera.contrib.messagebus.zeromq.broker"]
+CMD ["python", "-m", "frontera.contrib.messagebus.zeromq.broker", "-L", "DEBUG", "--address", "zmq-broker"]
